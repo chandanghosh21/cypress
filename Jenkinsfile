@@ -7,6 +7,12 @@ pipeline {
                 echo 'building'
                 sh 'npm install'
             }
+         stage('Test') {
+             steps {
+                echo 'Test'
+                sh 'npm run test'
+            }
+        }
         }
     }
 }
